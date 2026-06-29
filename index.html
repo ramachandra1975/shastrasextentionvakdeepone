@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Śabda-Bheda: The Birth of Discrimination · Series B · Part Two · Cultural Musings</title>
+<style>
+:root{
+  --bg:#0c0a08;
+  --bg-paper:#13100d;
+  --bg-card:#181410;
+  --ink:#ece3d4;
+  --ink-dim:#b8ad9a;
+  --ink-faint:#7d7263;
+  --accent:#c9933f;
+  --accent-soft:#8a6a3a;
+  --accent-deep:#5e3f1f;
+  --rule:#2c241c;
+  --sanskrit:#e0b873;
+  --serif:'Tinos','Georgia','Times New Roman',serif;
+  --display:'Spectral','Georgia',serif;
+  --max:780px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-deep);}
+a:hover{color:var(--sanskrit);border-bottom-color:var(--accent);}
+
+header.masthead{
+  text-align:center;padding:64px 24px 40px;border-bottom:1px solid var(--rule);
+  background:radial-gradient(ellipse at top, #1b150e 0%, var(--bg) 70%);
+}
+.brand{letter-spacing:.22em;font-size:13px;color:var(--ink-faint);text-transform:uppercase;}
+.platform-sub{font-size:13px;color:var(--ink-faint);margin-top:4px;}
+.series-tag{margin-top:28px;font-size:14px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;}
+.devanagari-strip{font-size:15px;color:var(--sanskrit);margin-top:10px;letter-spacing:.04em;}
+
+nav.toc{max-width:var(--max);margin:36px auto 0;padding:0 24px;text-align:center;font-size:14px;line-height:2.1;}
+nav.toc a{margin:0 10px;color:var(--ink-dim);border-bottom:1px dotted var(--accent-deep);}
+nav.toc a:hover{color:var(--sanskrit);}
+
+nav.allparts{
+  max-width:var(--max);margin:18px auto 0;padding:18px 24px 0;border-top:1px solid var(--rule);
+  text-align:center;font-size:13.5px;color:var(--ink-faint);line-height:1.9;
+}
+nav.allparts .current{color:var(--accent);font-weight:600;}
+nav.allparts a{color:var(--ink-dim);border-bottom:1px dotted var(--rule);}
+
+main{max-width:var(--max);margin:0 auto;padding:0 24px 80px;}
+
+.title-block{padding:56px 0 24px;text-align:center;}
+.title-block .kicker{font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;}
+.title-block h1{font-family:var(--display);font-size:42px;line-height:1.18;font-weight:600;margin:0 0 18px;color:#f4ead8;}
+.title-block h2.subtitle{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;color:var(--ink-dim);margin:0 0 30px;line-height:1.5;}
+.meta-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;font-size:14px;color:var(--ink-faint);margin-top:18px;}
+.meta-grid b{color:var(--ink-dim);font-weight:600;}
+
+.ornament{text-align:center;color:var(--accent-soft);font-size:20px;margin:40px 0;letter-spacing:.4em;}
+
+section.context-box, section.preview-box{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:32px 32px;margin:32px 0;
+}
+section.context-box h3, section.preview-box h3{font-family:var(--display);color:var(--sanskrit);font-size:20px;margin-top:0;}
+section.context-box h4, section.preview-box h4{font-size:16px;color:var(--ink-dim);margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em;}
+
+table.partmap{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+table.partmap th, table.partmap td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.partmap th{background:#1d170f;color:var(--accent);font-weight:600;}
+table.partmap tr:nth-child(even) td{background:#15110c;}
+table.partmap td.this-paper{color:var(--sanskrit);font-weight:600;}
+
+blockquote.pull{
+  margin:40px 0;padding:24px 28px;border-left:3px solid var(--accent);
+  background:linear-gradient(90deg, #1a140c, transparent);font-style:italic;font-size:18.5px;color:#ddd0b8;
+}
+blockquote.pull .attrib{display:block;text-align:right;font-style:normal;font-size:13px;color:var(--accent);margin-top:12px;letter-spacing:.05em;text-transform:uppercase;}
+
+h1.sectionhead{
+  font-family:var(--display);font-size:14px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;
+  margin:64px 0 4px;border-top:1px solid var(--rule);padding-top:36px;
+}
+h1.sectionhead + h2.sectiontitle{margin-top:6px;}
+h2.sectiontitle{font-family:var(--display);font-size:30px;line-height:1.25;color:#f4ead8;margin:0 0 28px;font-weight:600;}
+h3{font-family:var(--display);font-size:21px;color:var(--sanskrit);margin:38px 0 14px;}
+p{margin:0 0 18px;color:var(--ink);}
+.dim{color:var(--ink-dim);}
+
+.sanskrit-block{
+  text-align:center;font-size:21px;color:var(--sanskrit);line-height:1.9;margin:30px 0;padding:18px 0;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.sanskrit-block .translit{display:block;font-size:15px;font-style:italic;color:var(--ink-dim);margin-top:10px;font-family:var(--serif);}
+.sanskrit-block .gloss{display:block;font-size:14.5px;color:var(--ink-faint);margin-top:8px;font-family:var(--serif);font-style:normal;}
+.cite-source{text-align:center;font-size:13px;color:var(--ink-faint);margin-top:-22px;margin-bottom:30px;letter-spacing:.04em;}
+
+.vak-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:30px 0;}
+.vak-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px;}
+.vak-card.active{border-color:var(--accent-soft);background:#1c150c;}
+.vak-card .vc-sanskrit{font-family:var(--display);font-size:22px;color:var(--sanskrit);margin-bottom:4px;}
+.vak-card .vc-roman{font-size:13px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;}
+.vak-card .vc-label{font-weight:600;color:var(--ink);font-size:15px;margin-bottom:8px;}
+.vak-card p{font-size:14.5px;color:var(--ink-dim);margin-bottom:8px;}
+.vc-tag{font-size:12.5px;color:var(--accent);font-style:italic;}
+
+table.datatable{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px;}
+table.datatable th,table.datatable td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.datatable th{background:#1d170f;color:var(--accent);}
+table.datatable tr:nth-child(even) td{background:#15110c;}
+table.datatable caption{text-align:left;font-size:14px;color:var(--ink-faint);margin-bottom:10px;font-style:italic;}
+
+.divider-orn{text-align:center;color:var(--accent-deep);font-size:20px;margin:46px 0;letter-spacing:.5em;}
+
+footer.papertail{text-align:center;padding:48px 24px 80px;border-top:1px solid var(--rule);margin-top:60px;}
+footer.papertail .om{font-size:24px;color:var(--accent);margin-bottom:14px;}
+footer.papertail .omtatsat{font-size:14px;color:var(--ink-faint);font-style:italic;margin-bottom:30px;}
+footer.papertail .stamp{font-size:13px;color:var(--ink-faint);line-height:1.9;}
+footer.papertail .stamp b{color:var(--ink-dim);}
+
+.footnotes{font-size:14.5px;color:var(--ink-dim);}
+.footnotes li{margin-bottom:14px;}
+.footnotes sup{color:var(--accent);}
+
+.glossterm{font-family:var(--display);color:var(--sanskrit);font-size:17px;}
+dl.glossary dt{margin-top:22px;}
+dl.glossary dd{color:var(--ink-dim);font-size:14.5px;margin:6px 0 0;}
+
+.phoneme-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(60px,1fr));gap:6px;margin:24px 0;text-align:center;}
+.phoneme-cell{background:var(--bg-card);border:1px solid var(--rule);border-radius:3px;padding:10px 4px;font-family:var(--display);color:var(--sanskrit);font-size:17px;}
+.phoneme-cell small{display:block;color:var(--ink-faint);font-size:10px;margin-top:3px;}
+
+@media (max-width:600px){
+  body{font-size:16.5px;}
+  .title-block h1{font-size:30px;}
+  .title-block h2.subtitle{font-size:18px;}
+  h2.sectiontitle{font-size:24px;}
+  nav.toc a{margin:0 6px;display:inline-block;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">Cultural Musings</div>
+  <div class="platform-sub">Vedic &amp; Śāstric Research Platform</div>
+  <div class="series-tag">Series B · Part Two of Twelve</div>
+  <div class="devanagari-strip">शब्दभेदः · विवेकः · वर्णविभागः · चित्तभेदः</div>
+
+  <nav class="toc" aria-label="This paper">
+    <a href="#series-context">Series Context</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#sec-1">I. The Grammarian's Discovery</a>
+    <a href="#sec-2">II. Bheda as Cognitive Universal</a>
+    <a href="#sec-3">III. Pāṇini's Procedure as Mind's Procedure</a>
+    <a href="#sec-4">IV. Categorical Perception</a>
+    <a href="#sec-5">V. Viveka and the Birth of the Discriminating Self</a>
+    <a href="#sec-6">VI. Buddhi's Two Faces: Discrimination and Bondage</a>
+    <a href="#sec-7">VII. Forward to Part Three</a>
+    <a href="#footnotes">Footnotes</a>
+    <a href="#bibliography">Bibliography</a>
+    <a href="#glossary">Glossary</a>
+  </nav>
+
+  <nav class="allparts" aria-label="Series B — all parts">
+    <a href="https://shastrasvakpsychology.culturalmusings.com/">Part I · Vāk as the Ground of Psychological Awareness</a> ·
+    <span class="current">Part II · Śabda-Bheda: The Birth of Discrimination</span> ·
+    <a href="https://shastrasvakpsychology-partthree.culturalmusings.com/">Part III · Sāma Veda and the Birth of Affect</a> ·
+    <a href="https://shastrasvakpsychology-partfour.culturalmusings.com/">Part IV · Nāṭyaśāstra I: Rasa</a> ·
+    <a href="https://shastrasvakpsychology-partfive.culturalmusings.com/">Part V · Nāṭyaśāstra II: Abhinaya</a> ·
+    <a href="https://shastrasvakpsychology-partsix.culturalmusings.com/">Part VI · Yoga-Śāstra: Citta-Vṛtti</a> ·
+    <a href="https://shastrasvakpsychology-partseven.culturalmusings.com/">Part VII · Proliferation I: Vyākaraṇa, Nyāya</a> ·
+    <a href="https://shastrasvakpsychology-parteight.culturalmusings.com/">Part VIII · Proliferation II: Arthaśāstra, Āyurveda</a> ·
+    <a href="https://shastrasvakpsychology-partnine.culturalmusings.com/">Part IX · Mantra-Śāstra</a> ·
+    <a href="https://shastrasvakpsychology-partten.culturalmusings.com/">Part X · Case Studies</a> ·
+    <a href="https://shastrasvakpsychology-parteleven.culturalmusings.com/">Part XI · Dharma and Adharma</a> ·
+    <a href="https://shastrasvakpsychology-parttwelve.culturalmusings.com/">Part XII · Pratiprasava</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="title-block">
+    <div class="kicker">Series B · Part II of XII · White Paper</div>
+    <h1>Śabda-Bheda: The Birth of Discrimination</h1>
+    <h2 class="subtitle">How the Grammarian's Analysis of Sound Becomes the Mind's Analysis of Everything — Phonemic Differentiation as the Template of Psychological Individuation</h2>
+    <div class="meta-grid">
+      <span><b>Series</b> B · Part II of XII</span>
+      <span><b>Vāk Level</b> Paśyantī → Madhyamā (the threshold itself)</span>
+      <span><b>Format</b> White Paper · 45 Pages</span>
+      <span><b>Predecessor</b> Series B · Part I — Vāk as the Ground of Psychological Awareness</span>
+    </div>
+  </div>
+
+  <div class="ornament">↗</div>
+
+  <section id="series-context" class="context-box">
+    <h3>Where Part Two Stands</h3>
+    <p>Part One established the four levels of vāk as a psychological architecture, locating
+    Parā as pre-egoic plenitude and Paśyantī as the gestalt-moment of apprehension prior to
+    discriminating, individuating overlay. It named, but did not develop, the specific
+    mechanism by which Paśyantī's gestalt becomes differentiated into Madhyamā's structured
+    inner word — promising that this mechanism, śabda-bheda, would receive full treatment in
+    the present paper. Part Two fulfils that promise. It examines the grammatical tradition's
+    own technical analysis of how a continuous phonetic stream is divided into discrete,
+    meaningful units — drawing on Series A's Part Two treatment of the Māheśvara sūtras and
+    Part One's sphoṭa doctrine — and argues that this analysis, far from being a specialised
+    technical procedure relevant only to linguistics, is the most fully documented instance of
+    a general cognitive operation: bheda, differentiation, the cutting of an undivided field
+    into discrete, namable parts. The paper's central and most consequential claim is that
+    this same operation, observed with such precision by the grammatical tradition at the
+    level of sound, is what produces — not merely accompanies or reports on, but actually
+    produces — the experience of a world containing distinct objects, and eventually a
+    distinct self set over against that world.</p>
+
+    <h4>Why This Paper Is the Series' Structural Keystone</h4>
+    <p>Of the twelve parts in this series, Part Two occupies a distinctive structural
+    position: every subsequent part — Sāma Veda's affective differentiation, the
+    Nāṭyaśāstra's emotional and embodied differentiation, Yoga-śāstra's attentional
+    differentiation, the proliferating śāstras' cognitive and social differentiation, even
+    Mantra-śāstra's recursive return — presupposes that differentiation itself, the bheda
+    this paper examines, is a single underlying operation rather than a different operation
+    each time it is applied to new material. If that presupposition fails — if the
+    differentiation involved in phonemic analysis turns out to be only loosely, metaphorically
+    related to the differentiation involved in emotional or aesthetic experience — then the
+    series' entire architecture, in which a single psychological mechanism is traced through
+    its successive śāstric elaborations, loses its structural justification. This paper's task
+    is therefore to establish bheda's unity across domains with the same rigour Series A
+    brought to establishing vāk's four-level unity across linguistic phenomena.</p>
+
+    <table class="partmap">
+      <tr><th>Part</th><th>Psychological Stage</th><th>Focus</th></tr>
+      <tr><td>I</td><td>Pre-differentiated awareness</td><td>Vāk as the Ground of Psychological Awareness</td></tr>
+      <tr><td>II</td><td class="this-paper">Differentiation / discernment</td><td class="this-paper">This Paper — Śabda-Bheda: The Birth of Discrimination</td></tr>
+      <tr><td>III</td><td>Feeling-toned cognition</td><td>Sāma Veda and the Birth of Affect</td></tr>
+      <tr><td>IV</td><td>Aesthetic embodiment</td><td>Nāṭyaśāstra I: Rasa and the Architecture of Emotion</td></tr>
+      <tr><td>V</td><td>Somatic cognition</td><td>Nāṭyaśāstra II: Abhinaya and Embodied Expression</td></tr>
+      <tr><td>VI</td><td>Self-regulation / will</td><td>Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</td></tr>
+      <tr><td>VII</td><td>Specialised cognition</td><td>Proliferation of Śāstra I: Vyākaraṇa, Nyāya</td></tr>
+      <tr><td>VIII</td><td>Social/embodied extension</td><td>Proliferation of Śāstra II: Arthaśāstra, Āyurveda</td></tr>
+      <tr><td>IX</td><td>Recursive self-application</td><td>Mantra-Śāstra: Vāk Returning as Sound-Technology</td></tr>
+      <tr><td>X</td><td>Applied/historical synthesis</td><td>Case Studies in Śabda-to-Śāstra Transmission</td></tr>
+      <tr><td>XI</td><td>Ethical-metaphysical synthesis</td><td>Dharma and Adharma: The Convergent Psychology of Order</td></tr>
+      <tr><td>XII</td><td>Closing return</td><td>Pratiprasava: Vāk's Return and the Handoff Beyond</td></tr>
+    </table>
+
+    <blockquote class="pull">
+      Every śāstra this series will examine after the present paper is, in a precise sense, a
+      study of what happens when bheda is turned on new material. Before tracing what
+      differentiation produces in music, in drama, in disciplined attention, it is necessary
+      to know, with some precision, what differentiation itself is. That is this paper's
+      single task.
+      <span class="attrib">Series B · Editorial Framework</span>
+    </blockquote>
+  </section>
+
+  <div class="ornament">✦</div>
+
+  <section id="abstract">
+    <h2 class="sectiontitle" style="font-size:24px;">Abstract</h2>
+    <p>This paper develops the central mechanism this series requires for all subsequent
+    analysis: śabda-bheda, sound-differentiation, examined first in its original grammatical
+    domain and then generalised, with appropriate methodological caution, into a theory of
+    psychological discrimination applicable across cognitive, perceptual, and emotional
+    domains. Five arguments are developed. First, the Pāṇinian grammatical tradition's
+    procedure for analysing a continuous utterance into discrete phonemes (varṇa) and the
+    Māheśvara sūtras' organisation of those phonemes into structured classes — examined in
+    technical detail in Series A's Part Two — is shown to instantiate a general procedure with
+    four identifiable stages: an undivided continuum, a discrimination-operation applied to
+    that continuum, a resulting set of discrete units, and a residual boundary-phenomenon
+    (sandhi) marking where the units, despite being discrete, retain traces of their original
+    continuity. Second, this four-stage procedure is generalised, via the antaḥkaraṇa
+    architecture established in Part One, into a model of psychological differentiation
+    applicable beyond language: perceptual category-formation, emotional individuation, and
+    self/other boundary-formation are each examined as instances of the same four-stage
+    procedure applied to non-linguistic material. Third, the paper engages contemporary
+    research on categorical perception — the well-documented phenomenon whereby continuous
+    physical stimuli (colour wavelengths, phonetic continua) are perceived as falling into
+    discrete categories — as a directly relevant empirical literature, examining points of
+    genuine convergence and divergence with the bheda-framework. Fourth, the paper traces how
+    viveka (discriminative discernment), the Sāṃkhya-Yoga tradition's term for the
+    soteriologically decisive capacity to distinguish Puruṣa from Prakṛti, is shown to be
+    structurally continuous with — an advanced, self-applied instance of — the same
+    differentiation-operation examined throughout the paper at more basic perceptual and
+    linguistic levels. Fifth, the paper examines buddhi's double-edged status within this
+    architecture: the same discriminative function responsible for ordinary cognition's
+    coherence is shown, when misapplied to the boundary between self and not-self, to be the
+    proximate psychological cause of bondage (avidyā) — establishing the problem that Part Six's
+    treatment of Yoga-śāstra will address as its central soteriological concern.</p>
+    <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px 24px;margin:24px 0;font-size:14.5px;color:var(--ink-dim);">
+      <b style="color:var(--ink);">Reading Note</b> — This paper presupposes Part One's
+      four-vāk psychological architecture and Series A's Part Two treatment of the Māheśvara
+      sūtras and Part One's sphoṭa doctrine. Readers arriving without that background should
+      consult those papers' relevant sections before proceeding; Section I below provides a
+      working summary sufficient for this paper's argument but does not repeat the full
+      grammatical-philosophical case Series A developed.
+    </div>
+  </section>
+
+  <h1 class="sectionhead" id="sec-1">I.</h1>
+  <h2 class="sectiontitle">The Grammarian's Discovery: Bheda at the Level of Sound</h2>
+
+  <h3>1.1 What the Grammarian Actually Does</h3>
+  <p>When a Pāṇinian grammarian analyses a Sanskrit utterance, the procedure performed is not,
+  on its face, a psychological inquiry; it is a technical, descriptive procedure for
+  identifying which discrete phonemic units (varṇas) compose a given continuous stream of
+  speech-sound, and which grammatical rules govern their combination. The procedure begins
+  with what is, acoustically, a continuous and undivided event: the vibration of air produced
+  by a speaker's vocal apparatus does not arrive at a hearer's ear pre-divided into discrete
+  phonemes with clean boundaries between them; coarticulation — the overlapping influence of
+  adjacent sounds on one another's acoustic realisation — means that the physical signal is, at
+  the purely acoustic level, considerably more continuous and blended than the discrete
+  phonemic categories (k, a, t, a) that both speaker and hearer effortlessly recognise in it.</p>
+  <p>The grammarian's analytical procedure — and, this paper will argue, the ordinary
+  speaker-hearer's entirely automatic, non-deliberate cognitive procedure, which the
+  grammarian's technical analysis renders explicit — performs a specific operation on this
+  continuous signal: it divides it into discrete units (the varṇas), assigns each unit a
+  determinate identity (this segment is /k/, not /g/ or /kh/), and specifies the rules
+  governing how these now-discrete units combine and influence one another at their
+  boundaries (sandhi). This is bheda — literally "splitting," "breaking," "division" — applied
+  to the specific material of speech-sound. Series A's Part Two, Section 2.2, already
+  examined one technical dimension of this procedure in detail: Pāṇini's pratyāhāra technique,
+  by which the Māheśvara sūtras' specific arrangement of phonemes allows entire phoneme-classes
+  to be referred to compactly. The present paper's concern is one level prior to pratyāhāra's
+  compression-technique: the more basic question of how the continuous stream comes to be
+  divided into discrete varṇas in the first place, such that pratyāhāra then has discrete units
+  available to compress.</p>
+
+  <h3>1.2 The Four-Stage Structure of Śabda-Bheda</h3>
+  <p>Careful examination of the grammatical tradition's own analytical practice — both
+  Pāṇini's explicit procedures and the commentarial tradition's reflection upon them in
+  Patañjali's Mahābhāṣya — yields a four-stage structure that this paper proposes as
+  śabda-bheda's general form, applicable, the paper will argue across Sections II through VI,
+  considerably beyond the phonemic domain in which it is most explicitly documented.</p>
+
+  <table class="datatable">
+    <caption>The Four-Stage Structure of Śabda-Bheda, Illustrated at the Phonemic Level</caption>
+    <tr><th>Stage</th><th>Sanskrit Term</th><th>What Occurs</th><th>Phonemic Illustration</th></tr>
+    <tr><td>1. The undivided continuum</td><td>अखण्ड प्रवाह (akhaṇḍa pravāha)</td><td>A continuous field, not yet containing discrete units, available for differentiation</td><td>The continuous, coarticulated acoustic stream of an utterance prior to phonemic analysis</td></tr>
+    <tr><td>2. The discrimination-operation</td><td>विवेक / भेद (viveka / bheda)</td><td>An active cutting or distinguishing operation applied to the continuum</td><td>The grammarian's (or the automatic cognitive system's) procedure for locating phonemic boundaries</td></tr>
+    <tr><td>3. The resulting discrete units</td><td>वर्ण / पद (varṇa / pada)</td><td>Determinate, namable, individually identifiable units now available for combination and analysis</td><td>The discrete phonemes (k, a, t, a) recognised as the utterance's constituents</td></tr>
+    <tr><td>4. The residual boundary-phenomenon</td><td>सन्धि (sandhi)</td><td>Traces of the units' original continuity, surfacing as systematic modification at their junctures</td><td>Sandhi rules governing how adjacent phonemes modify one another at word and morpheme boundaries</td></tr>
+  </table>
+
+  <h3>1.3 Sandhi as Evidence That Differentiation Is Never Total</h3>
+  <p>Stage four deserves particular emphasis, because it is the stage most likely to be
+  overlooked in a hasty generalisation of the bheda-procedure, and it is philosophically the
+  most significant for this paper's eventual argument (Sections V–VI) about the costs and
+  limits of psychological differentiation generally. Sandhi — already examined in a different
+  connection in Series A's Part Three, Section 1.2, as the technical term this paper's
+  predecessor series used for the Puruṣa–Prakṛti interface itself — demonstrates that the
+  division performed in Stage 2 is never a total, clean separation of the original continuum
+  into fully independent, mutually inert units. The discrete phonemes that Pāṇinian grammar
+  identifies do not, once identified, behave as if they had no history of having been
+  continuous: their pronunciation systematically shifts depending on what precedes and follows
+  them, in patterns precise enough that Pāṇini devotes a substantial portion of the
+  Aṣṭādhyāyī's rules to specifying exactly how. Sandhi is, in other words, the formal,
+  rule-governed memory that differentiation retains of the undifferentiated continuum it
+  divided — and this paper's later sections (V–VI) will argue that an exact structural
+  analogue of sandhi is what makes self/other boundary-formation, examined as a case of
+  bheda applied to experience generally, similarly never a total, clean separation.</p>
+
+  <blockquote class="pull">
+    Sandhi is the grammar's confession that no division is ever perfectly final. The phonemes
+    are discrete — Pāṇini is right about that — but discrete is not the same as independent,
+    and the rules governing how adjacent sounds lean on one another at their boundaries are
+    the formal record of a continuity that division did not, and could not, fully erase.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="sanskrit-block">
+    सिद्धे शब्दार्थसम्बन्धे लोकतोऽर्थप्रयुक्ते शब्दप्रयोगे शास्त्रेण धर्मनियमः
+    <span class="translit">siddhe śabdārtha-sambandhe loka-to'rtha-prayukte śabda-prayoge śāstreṇa dharma-niyamaḥ</span>
+    <span class="gloss">The relation between word and meaning being already established through ordinary usage, the science (grammar) regulates correct usage for the sake of dharma — Patañjali, Mahābhāṣya, Paspaśāhnika (opening discussion)</span>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-2">II.</h1>
+  <h2 class="sectiontitle">Bheda as a Cognitive Universal: From Phoneme to Percept</h2>
+
+  <h3>2.1 The Generalisation Claim, Stated Precisely</h3>
+  <p>The claim this paper now advances — that the four-stage śabda-bheda structure identified
+  in Section I is not unique to phonemic analysis but is the general form taken by
+  psychological differentiation wherever it occurs — requires careful statement if it is not
+  to collapse into an unfalsifiable, merely metaphorical assertion. The claim is not that
+  every instance of psychological discrimination literally involves phonemes, nor that the
+  specific content of Pāṇini's sandhi-rules applies outside the linguistic domain. The claim
+  is structural: that the four-stage pattern (undivided continuum → discrimination-operation
+  → discrete units → residual boundary-trace) recurs, with appropriately different content at
+  each stage, across multiple cognitive domains, and that this recurrence is not coincidental
+  but reflects a single underlying cognitive capacity — located, per Part One's Section V, in
+  the antaḥkaraṇa's buddhi-function — being applied to different material.</p>
+
+  <h3>2.2 Perceptual Category-Formation as Bheda Applied to Sensory Continua</h3>
+  <p>The clearest non-linguistic domain in which the four-stage structure can be directly
+  examined is perceptual category-formation generally, of which the categorical perception of
+  speech sounds (examined in detail in Section IV below) is one well-studied instance among
+  several. Colour perception offers an especially clean illustration: the visible electromagnetic
+  spectrum is, as a physical phenomenon, a continuous gradient of wavelengths with no
+  objective boundaries marking off "red" from "orange" or "blue" from "green." Human colour
+  perception, however, does not register this continuum as continuous; it registers it as
+  falling into a relatively small number of discrete perceptual categories, with
+  category-boundaries that, while showing some cross-linguistic and cross-cultural variation
+  in exact placement (a finding examined further in Section IV), are nonetheless robustly
+  discrete rather than smoothly graded in subjective experience. The four-stage structure maps
+  directly: the continuous wavelength-gradient is Stage 1; the visual system's
+  categorisation-mechanism (involving both retinal photoreceptor properties and downstream
+  cortical processing) is Stage 2's discrimination-operation; the discrete colour-categories
+  ("red," "blue," "green") available to naming and memory are Stage 3's resulting units; and
+  the well-documented phenomenon of categorical assimilation at boundary-wavelengths — where a
+  wavelength objectively intermediate between two categories is nonetheless perceived as
+  belonging more clearly to one or the other, with reaction-time and discrimination-accuracy
+  data showing systematic boundary-effects — constitutes a perceptual analogue to Stage 4's
+  sandhi, the residual trace of the underlying continuum's having been divided rather than
+  naturally discrete.</p>
+
+  <h3>2.3 Object Individuation as Bheda Applied to the Visual Field</h3>
+  <p>A second non-linguistic domain, more directly relevant to this series' developmental-
+  psychological concerns from Part One, is object individuation: the perceptual achievement,
+  documented extensively in infant cognition research, by which a continuous visual field
+  (light reflecting from a continuously varying surface of surfaces, with no inherent
+  boundaries marking off "this object" from "that object" except where actual physical
+  discontinuities exist) comes to be parsed into discrete, trackable objects, each maintaining
+  identity across the infant's own movement and the object's own motion. Elizabeth Spelke's
+  extensive research programme on infant object-perception has established that human infants,
+  from a remarkably early age, parse visual scenes using principles (cohesion, boundedness,
+  spatiotemporal continuity) that function, in this paper's vocabulary, as Stage 2's
+  discrimination-operation applied to the continuous visual field of Stage 1, yielding the
+  discrete, trackable objects of Stage 3. The relevant Stage 4 boundary-phenomenon in this
+  domain is the well-documented set of cases — object-occlusion, apparent merging of distinct
+  objects when they touch, the broader literature on perceptual grouping — in which the
+  discreteness achieved in Stage 3 proves imperfect, context-dependent, and subject to
+  systematic revision, exactly as sandhi reveals phonemic discreteness to be imperfect and
+  context-dependent at word-boundaries.</p>
+
+  <table class="datatable">
+    <caption>The Four-Stage Bheda Structure Across Three Domains</caption>
+    <tr><th>Stage</th><th>Phonemic (Section I)</th><th>Chromatic (2.2)</th><th>Object-Perceptual (2.3)</th></tr>
+    <tr><td>1. Undivided continuum</td><td>Continuous, coarticulated acoustic stream</td><td>Continuous electromagnetic wavelength-gradient</td><td>Continuous visual field with no inherent object-boundaries except physical discontinuities</td></tr>
+    <tr><td>2. Discrimination-operation</td><td>Phonemic analysis (grammatical or automatic cognitive)</td><td>Retinal and cortical colour-categorisation mechanisms</td><td>Cohesion, boundedness, and spatiotemporal-continuity principles (Spelke)</td></tr>
+    <tr><td>3. Discrete units</td><td>Varṇas — individually identifiable phonemes</td><td>Discrete colour-categories (red, blue, green...)</td><td>Discrete, individually trackable objects</td></tr>
+    <tr><td>4. Residual boundary-trace</td><td>Sandhi — systematic modification at phonemic junctures</td><td>Categorical assimilation at boundary-wavelengths</td><td>Occlusion, apparent merging, and context-dependent re-individuation</td></tr>
+  </table>
+
+  <h3>2.4 What Licenses Calling This One Operation Rather Than Three Analogous Ones</h3>
+  <p>A reasonable objection at this point asks why the three domains examined above should be
+  understood as instances of one underlying cognitive operation rather than as three
+  independently-evolved, domain-specific mechanisms that happen, coincidentally or through
+  convergent functional pressure, to exhibit a similar four-stage structure. The paper's
+  answer, developed more fully in Section III through the lens of Pāṇinian procedure itself
+  and in Section V through the lens of viveka, rests on the antaḥkaraṇa architecture
+  established in Part One: if buddhi is, as Part One's Section 5.2 argued, a single
+  discriminating function rather than a bundle of domain-specific sub-faculties, and if this
+  single function is what performs adhyavasāya (determinate identification) across
+  perceptual, linguistic, and conceptual material alike, then the recurrence of a single
+  four-stage structure across phonemic, chromatic, and object-perceptual domains is exactly
+  what the antaḥkaraṇa model predicts, rather than a coincidence requiring separate
+  explanation in each domain. This is, the paper acknowledges, a substantive philosophical
+  commitment — buddhi's unity across domains — rather than a finding straightforwardly
+  readable off the empirical data alone; the empirical data (Sections II and IV) is consistent
+  with, and the paper argues is best explained by, this commitment, without strictly
+  entailing it to the exclusion of a domain-specific-mechanisms alternative that more
+  modular theories of cognition would favour.</p>
+
+  <blockquote class="pull">
+    The question is not whether colour-categorisation and phoneme-recognition look similar
+    when drawn as a four-step diagram. Many unrelated processes can be made to look similar
+    on a sufficiently abstract diagram. The question is whether one mind, doing one kind of
+    thing, is what is actually at work beneath both diagrams — and that question cannot be
+    settled by the diagram's elegance alone.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-3">III.</h1>
+  <h2 class="sectiontitle">Pāṇini's Procedure as a Model of Mind's Procedure</h2>
+
+  <h3>3.1 Why Pāṇini's Specific Method Matters Beyond Sanskrit</h3>
+  <p>Series A's Part One, Section 4.3, already established that Pāṇinian grammar should be
+  read not as a merely descriptive catalogue of Sanskrit's observed forms but as a revelation
+  of language's intrinsic structure — a claim the grammatical-philosophical tradition
+  (Kātyāyana, Patañjali the grammarian, Bharṭṛhari) developed and defended at length. The
+  present paper extends this claim one step further: if Pāṇini's method reveals not merely
+  Sanskrit's structure but a structure of mind's own analytical procedure (since, per Section
+  2.4 above, the buddhi performing linguistic analysis is the same buddhi performing
+  perceptual and conceptual analysis), then Pāṇini's specific technical procedures —
+  pratyāhāra's compression-technique, the sūtra-method's economy, the systematic ordering
+  principles governing rule-application (such as the principle that a more specific rule
+  overrides a more general one, vipratiṣedhe paraṃ kāryam) — are not merely useful grammatical
+  tools but documented instances of how the mind's general discriminating procedure actually
+  operates when most explicitly and rigorously exercised.</p>
+
+  <h3>3.2 Pratyāhāra as a Model of Categorical Compression Generally</h3>
+  <p>Pratyāhāra's technique — referring to an entire class of phonemes by citing only the
+  first member together with a closing marker (Series A, Part Two, Section 2.2) — exploits a
+  specific property of the Māheśvara sūtras' arrangement: phonemes that need to be grouped
+  together for grammatical purposes are positioned so that a single compact reference can
+  capture exactly that set. This paper proposes that this same compression-logic — exploiting
+  a prior, already-discriminated ordering to allow efficient reference to entire classes
+  without exhaustive enumeration — is a general feature of how discriminated categories,
+  once established, are subsequently used in cognition generally. Once colour-categorisation
+  (Section 2.2) has established discrete categories from the wavelength continuum, the mind
+  does not need to re-derive "red" from first principles each time it encounters a red
+  object; it refers to the category compactly, exactly as pratyāhāra refers to a phoneme-class
+  compactly, exploiting a prior act of discrimination rather than repeating it. Cognitive
+  economy of this general kind — established categories enabling efficient subsequent
+  reference — is a recognised feature of concept-formation in cognitive psychology generally,
+  and this paper's proposal is that pratyāhāra is the grammatical tradition's own precise,
+  technical articulation of exactly this general cognitive economy, examined at the one
+  domain (phonemes) where the tradition had developed tools precise enough to formalise it
+  completely.</p>
+
+  <h3>3.3 The Principle of Specific-Overrides-General as a Model of Contextual Discrimination</h3>
+  <p>A second Pāṇinian principle worth examining in this connection is vipratiṣedhe paraṃ
+  kāryam — in cases of conflict between grammatical rules, the more specific rule
+  (governing a narrower range of cases) takes precedence over the more general rule
+  (governing a broader range). This principle, which allows the Aṣṭādhyāyī's thousands of
+  rules to apply consistently despite frequent apparent conflicts between general and
+  specific provisions, has a direct cognitive-psychological analogue in the well-documented
+  phenomenon, examined across categorisation research generally, whereby perceivers default
+  to broad, general categories under conditions of limited information or attention but
+  shift to narrower, more specific categories as additional discriminating information
+  becomes available — a basic-level-to-subordinate-level shift extensively documented in
+  Eleanor Rosch's prototype theory of categorisation and in subsequent research on
+  hierarchical category structure. The Pāṇinian principle and the cognitive-psychological
+  finding are not, on this paper's account, merely superficially similar; both are
+  documented instances of a single underlying logic — that discrimination, properly
+  conducted, should resolve to the most specific available distinction the current
+  information supports, with broader categories serving as defaults precisely where more
+  specific discrimination has not yet, or cannot yet, be performed.</p>
+
+  <table class="datatable">
+    <caption>Pāṇinian Grammatical Principles and Their General-Cognitive Analogues</caption>
+    <tr><th>Pāṇinian Principle</th><th>Sanskrit</th><th>Grammatical Function</th><th>General-Cognitive Analogue</th></tr>
+    <tr><td>Compression by first-member-plus-marker</td><td>प्रत्याहार (pratyāhāra)</td><td>Compact reference to an entire phoneme-class without enumeration</td><td>Cognitive economy of established categories — efficient subsequent reference exploiting prior discrimination</td></tr>
+    <tr><td>Specific overrides general in conflict</td><td>विप्रतिषेधे परं कार्यम्</td><td>Narrower grammatical rule takes precedence over broader one</td><td>Basic-level-to-subordinate-level shift in categorisation as discriminating information increases (Rosch)</td></tr>
+    <tr><td>Minimal sufficient rule-application</td><td>लाघव (lāghava, economy)</td><td>Grammar favours the most economical formulation achieving the required result</td><td>Cognitive parsimony / minimal-description-length preferences documented in perceptual organisation (gestalt's law of simplicity)</td></tr>
+  </table>
+
+  <h3>3.4 The Methodological Status of These Parallels</h3>
+  <p>As with every comparative claim this series advances, the parallels drawn in this
+  section are offered with the same caution Series A consistently exercised. Pāṇini did not
+  intend, and could not have intended, his grammatical principles as covert statements about
+  general cognitive psychology; he was producing a technical description of Sanskrit. The
+  claim this paper defends is not that Pāṇini secretly anticipated Rosch's prototype theory,
+  but that both Pāṇini's grammatical analysis and Rosch's cognitive-psychological research
+  are independently arrived-at, formally precise documentations of a single underlying
+  cognitive capacity — buddhi's discriminating function, per the antaḥkaraṇa architecture —
+  operating, in each case, at the limit of analytical precision the respective inquiry's
+  methods allowed. The convergence is evidence for, though does not by itself prove, the
+  unity-of-buddhi thesis Section 2.4 identified as this paper's substantive philosophical
+  commitment.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-4">IV.</h1>
+  <h2 class="sectiontitle">Categorical Perception: The Empirical Literature Most Directly Relevant</h2>
+
+  <h3>4.1 What Categorical Perception Research Establishes</h3>
+  <p>The empirical literature on categorical perception — initiated by Alvin Liberman and
+  colleagues' mid-twentieth-century research on speech-sound perception and substantially
+  extended since to colour, facial expression, and other perceptual domains — provides this
+  paper's argument with its most direct and most rigorously documented empirical anchor.
+  Liberman's foundational finding, using synthesised speech sounds varying continuously along
+  an acoustic parameter (such as voice-onset-time, which distinguishes /ba/ from /pa/),
+  demonstrated that listeners do not perceive this continuous acoustic variation as
+  continuous: discrimination between two stimuli is dramatically better when the stimuli fall
+  on opposite sides of a category boundary (one perceived as /ba/, the other as /pa/) than
+  when they fall an equal acoustic distance apart but within the same category. This finding
+  — that perceptual discrimination tracks categorical boundaries rather than raw physical
+  difference — is the single most direct empirical confirmation available, from a research
+  tradition developed entirely independently of and with no reference to the Sanskrit
+  grammatical tradition, of this paper's core claim: that perception is fundamentally
+  organised around discrete, discriminated categories rather than around faithful registration
+  of an underlying continuum.</p>
+
+  <h3>4.2 The Warped Perceptual Space and Sandhi Revisited</h3>
+  <p>Subsequent categorical perception research has documented what is sometimes described as
+  a "warping" of perceptual space around category boundaries: stimuli near a boundary are
+  perceptually less stable, more prone to being categorised differently on repeated
+  presentation, and subject to context-effects (the same acoustic stimulus categorised
+  differently depending on the preceding linguistic context) that closely parallel this
+  paper's Stage 4 sandhi-phenomenon. The categorical perception literature's documentation of
+  boundary-instability and context-dependent recategorisation is, on this paper's reading, an
+  independent empirical confirmation of exactly the claim Section 1.3 made about sandhi: that
+  discrimination, however robust its central, prototypical cases, never achieves total,
+  context-independent separation at its boundaries, because the boundaries mark the trace of
+  an underlying continuity that the discrimination-operation divided but did not eliminate.</p>
+
+  <h3>4.3 Cross-Linguistic and Cross-Cultural Variation: A Genuine Complication</h3>
+  <p>A finding from the categorical perception literature that requires careful handling,
+  because it complicates rather than simply confirms this paper's argument, concerns
+  cross-linguistic variation in category-boundary placement. Speakers of different languages,
+  exposed to the same continuous acoustic or chromatic stimuli, demonstrably draw category
+  boundaries at different points along the continuum — Russian speakers, for instance,
+  categorically distinguishing two shades of blue (goluboy and siniy) that English speakers
+  perceive as a single category, with measurable perceptual and reaction-time consequences for
+  Russian speakers that English speakers do not show. This finding establishes that the
+  specific location of Stage 2's discrimination-operation, while always producing Stage 3's
+  discrete categories from Stage 1's continuum, is not fixed by the continuum's own physical
+  structure alone; it is substantially shaped by prior linguistic and cultural experience —
+  which is to say, in this paper's vocabulary, that citta's saṃskāra-substrate (Part One,
+  Section 5.3) conditions where buddhi's discriminating operation draws its boundaries, a
+  conditioning this paper's Part One, Section 5a.2, already examined in connection with
+  perceptual illusion and the rope-snake case. The cross-linguistic variation evidence does
+  not undermine this paper's claim that discrimination is universally bheda-structured; it
+  strengthens the more specific claim, already implicit in the antaḥkaraṇa architecture, that
+  where the discriminating cut falls is itself a saṃskāra-conditioned, and therefore variable
+  and culturally inflected, feature of the discrimination-process rather than a fixed
+  parameter given once and for all by the underlying physical continuum.</p>
+
+  <table class="datatable">
+    <caption>Categorical Perception Findings and the Bheda-Architecture</caption>
+    <tr><th>Empirical Finding</th><th>Source</th><th>Bheda-Architecture Interpretation</th></tr>
+    <tr><td>Discrimination tracks category boundaries, not raw acoustic distance</td><td>Liberman et al., speech perception</td><td>Direct confirmation of Stage 3: perception is organised around discrete categories, not continuum-fidelity</td></tr>
+    <tr><td>Boundary-stimuli show instability and context-dependent recategorisation</td><td>Subsequent categorical perception research</td><td>Empirical analogue of Stage 4 (sandhi): boundaries retain traces of the underlying continuum's non-discreteness</td></tr>
+    <tr><td>Category-boundary placement varies cross-linguistically (e.g. Russian blue categories)</td><td>Winawer et al. and related cross-linguistic colour-perception research</td><td>Confirms that Stage 2's discrimination-operation is saṃskāra-conditioned (Part One, 5.3), not fixed by the continuum's physical structure alone</td></tr>
+  </table>
+
+  <h3>4.4 What This Section Adds to the Series' Argument</h3>
+  <p>The categorical perception literature examined in this section serves a specific
+  function within this paper's larger argument and within the series' overall structure. It
+  establishes that the bheda-architecture this paper proposes is not merely a philosophically
+  motivated redescription of facts equally well captured by other frameworks, but a framework
+  that generates, and finds confirmed, specific empirical predictions (boundary-instability,
+  saṃskāra-conditioned variation) that a naive continuum-fidelity model of perception would not
+  predict. This evidentiary grounding matters for the series as a whole because Parts Three
+  through Eleven will repeatedly apply the bheda-architecture to domains — affect, aesthetic
+  experience, attention, social cognition — where comparably rigorous empirical literatures
+  either do not yet exist or are considerably less developed than the categorical perception
+  literature examined here. Establishing the architecture's empirical credibility in this
+  paper's best-evidenced domain is the necessary foundation for the more speculative
+  extensions the later parts will undertake.</p>
+
+  <blockquote class="pull">
+    Liberman's listeners, discriminating synthesised syllables in a mid-century American
+    laboratory, had never heard of the Māheśvara sūtras. That their data nonetheless traces
+    the same boundary-instability the grammatical tradition built directly into its sandhi
+    rules two and a half thousand years earlier is the kind of convergence a methodologically
+    serious series can build on — carefully, and without claiming more than the convergence
+    itself supports.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-5">V.</h1>
+  <h2 class="sectiontitle">Viveka: Discrimination Turned Upon the Self</h2>
+
+  <h3>5.1 From Ordinary Discrimination to Soteriological Discrimination</h3>
+  <p>The Sāṃkhya-Yoga tradition's technical term viveka — discriminative discernment,
+  most often encountered in the compound viveka-khyāti, the "discriminative knowledge" that
+  Series A's Part Three, Section 11.3, identified as the culminating achievement of Patañjali's
+  aṣṭāṅga path, the clarity by which Puruṣa recognises itself as distinct from even the
+  subtlest Prakṛtic products — names what this paper proposes is the most advanced and most
+  consequential application of the same bheda-operation examined throughout this paper at more
+  basic perceptual and linguistic levels. Viveka is, on this account, structurally continuous
+  with phonemic discrimination, chromatic categorisation, and object-individuation; it is
+  bheda applied not to an external sensory continuum but to the most intimate and
+  consequential continuum available to any mind: the apparent, pre-reflective fusion of
+  Puruṣa's witnessing presence with Prakṛti's dynamic products, out of which the ordinary,
+  unreflective sense of being a bounded, embodied, suffering self continuously arises.</p>
+
+  <h3>5.2 Why Viveka Requires the Same Four Stages</h3>
+  <p>The four-stage structure this paper has traced through phonemic, chromatic, and
+  object-perceptual domains recurs, with appropriate adjustment, in viveka's operation as the
+  Yoga tradition describes it. Stage 1's undivided continuum is the ordinary, pre-reflective
+  condition in which Puruṣa's witness-character and Prakṛti's antaḥkaraṇa-level activity
+  (manas, buddhi, ahaṃkāra, citta) are experienced as a seamless, undifferentiated "I" —
+  Series A's Part Three, Section 3.2, identified this condition precisely as the
+  "primordial confusion" (aviveka, the un-discrimination that is viveka's negation) in which
+  Puruṣa mistakes itself for the products it witnesses. Stage 2's discrimination-operation is
+  the sustained contemplative practice — śravaṇa, manana, and especially nididhyāsana, the
+  threefold discipline Series A's Part Five, Section 2.3, examined in connection with the
+  guru-paramparā — by which this apparent fusion is progressively analysed and seen through.
+  Stage 3's resulting discrete units are, in this domain, not phonemes or colour-categories
+  but the clearly distinguished Puruṣa and Prakṛti themselves — no longer experienced as
+  fused but as the two genuinely distinct realities Sāṃkhya's metaphysics had, from the
+  outset, held them to be. And Stage 4's residual boundary-trace is kaivalya's own peculiar
+  character as a discrimination that, having been fully achieved, does not abolish Prakṛti's
+  continued activity (Series A, Part Three, Section 3.3: "Prakṛti, like a dancer whose
+  performance ends when the audience has left, ceases its display before the liberated
+  Puruṣa — not because Prakṛti has been destroyed... but because the purpose of its display
+  has been fulfilled") but reveals that activity's continuation as no longer mistaken for the
+  witness's own.</p>
+
+  <table class="datatable">
+    <caption>The Four-Stage Bheda Structure Applied to Viveka</caption>
+    <tr><th>Stage</th><th>Ordinary Perceptual Instance (Sections I–IV)</th><th>Viveka (Soteriological Instance)</th></tr>
+    <tr><td>1. Undivided continuum</td><td>Continuous acoustic / chromatic / visual field</td><td>The pre-reflective, apparently seamless fusion of Puruṣa with Prakṛti's antaḥkaraṇa-activity (aviveka)</td></tr>
+    <tr><td>2. Discrimination-operation</td><td>Automatic or technical perceptual/grammatical analysis</td><td>Śravaṇa, manana, nididhyāsana — the threefold contemplative discipline</td></tr>
+    <tr><td>3. Discrete units</td><td>Phonemes, colour-categories, individuated objects</td><td>Puruṣa and Prakṛti, clearly and irreversibly distinguished (viveka-khyāti)</td></tr>
+    <tr><td>4. Residual boundary-trace</td><td>Sandhi, categorical-boundary instability</td><td>Prakṛti's continued activity after kaivalya — not abolished, but no longer mistaken for the witness</td></tr>
+  </table>
+
+  <h3>5.3 Why This Is Not Merely an Analogy</h3>
+  <p>The structural parallel developed in this section could be read, on a deflationary
+  interpretation, as nothing more than a literary device — a way of making an already
+  well-understood soteriological doctrine (viveka-khyāti) more vivid by likening it to the
+  unrelated, independently well-understood phenomenon of perceptual categorisation. This
+  paper's argument is considerably stronger than this deflationary reading allows, and the
+  strength of the claim follows directly from the antaḥkaraṇa architecture established in
+  Part One and extended throughout the present paper. If buddhi is, as Section 2.4 argued, a
+  single discriminating function rather than a bundle of unrelated domain-specific
+  mechanisms, then the very faculty that performs ordinary perceptual discrimination
+  (Sections II and IV) is, quite literally and not merely analogically, the same faculty whose
+  most refined and most consequential exercise the Yoga tradition calls viveka-khyāti. The
+  contemplative practitioner cultivating viveka is not doing something categorically different
+  from what a listener does in discriminating /ba/ from /pa/; the practitioner is exercising
+  the identical buddhi-function, at a level of sustained refinement and directed toward
+  material (the Puruṣa-Prakṛti boundary itself) of an entirely different order of
+  consequence, but through the same basic operation this paper has traced from Section I
+  onward.</p>
+
+  <blockquote class="pull">
+    The same buddhi that tells a listener where one phoneme ends and the next begins is the
+    buddhi the Yoga tradition asks the practitioner to refine until it can tell, with equal
+    clarity, where the witness ends and the witnessed begins. The stakes could not be more
+    different. The faculty doing the work is, on this paper's argument, exactly the same.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-6">VI.</h1>
+  <h2 class="sectiontitle">Buddhi's Two Faces: Discrimination as Both Cognitive Achievement and Proximate Cause of Bondage</h2>
+
+  <h3>6.1 The Problem This Section Addresses</h3>
+  <p>If buddhi's discriminating function is, as Sections I through V have argued, the single
+  underlying capacity responsible for phonemic analysis, perceptual categorisation, and the
+  soteriological achievement of viveka-khyāti alike, a pointed question arises that this
+  paper cannot responsibly avoid: if discrimination is uniformly the source of cognitive and
+  even liberative achievement, why does the tradition also, and just as consistently, identify
+  discrimination — specifically, the discriminating, individuating activity of ahaṃkāra, the
+  antaḥkaraṇa function most intimately bound up with buddhi's adhyavasāya (Part One, Section
+  5.2) — as the proximate psychological mechanism of bondage (avidyā, aviveka) itself? The
+  same operation cannot be uniformly liberative and uniformly binding without further
+  specification of what, exactly, differs between its liberative and its binding modes of
+  exercise.</p>
+
+  <h3>6.2 The Resolution: What Discrimination Discriminates, Not Whether It Discriminates</h3>
+  <p>This paper's resolution of the apparent tension draws directly on the four-stage
+  structure developed throughout. Discrimination (bheda) is not, in itself, either binding or
+  liberative; it is the basic cognitive operation by which any determinate content — true or
+  false, liberative or binding — comes to be available to awareness at all, exactly as Section
+  5a.2 of Part One established for perceptual error generally (the rope-snake case): error and
+  veridical perception are the same kind of psychological event, differing only in whether the
+  discrimination achieved matches the object's actual structure. Bondage arises specifically
+  when buddhi's discriminating, ahaṃkāra-mediated operation is applied to the Puruṣa-Prakṛti
+  boundary and resolves that boundary incorrectly — attributing to Puruṣa qualities (change,
+  suffering, embodiment, mortality) that in fact belong only to Prakṛti's products, exactly as
+  Series A's Part Three, Section 3.2, described: "bondage is Puruṣa's apparent involvement
+  with Prakṛti's products, due to a primordial confusion (aviveka, non-discrimination) in
+  which Puruṣa mistakes itself for the products it witnesses." This is, in this paper's
+  four-stage vocabulary, a case of Stage 2's discrimination-operation being applied to Stage
+  1's undivided continuum (the pre-reflective Puruṣa-Prakṛti fusion) but yielding, at Stage 3,
+  a misresolution: the discrete units the discrimination produces (a bounded, suffering,
+  changing "I") do not correctly correspond to the underlying reality's actual structure (an
+  unchanging witness in proximity to a changing, but ultimately distinct, dynamic matrix).</p>
+
+  <h3>6.3 Why Misresolution Is Possible: The Underdetermined Boundary</h3>
+  <p>What makes such misresolution possible — rather than buddhi simply, reliably,
+  discriminating correctly every time, as a well-functioning sensory system reliably
+  discriminates phonemes or colours — is a feature of the Puruṣa-Prakṛti boundary that this
+  paper's Section 4.3 already identified in a different connection: discrimination's
+  boundary-placement is saṃskāra-conditioned, shaped by citta's retained prior impressions
+  rather than read directly off an unambiguous given. Where phonemic and chromatic
+  discrimination operate on boundaries that, however saṃskāra-inflected at the margins
+  (Section 4.3's cross-linguistic variation), are nonetheless anchored by a real underlying
+  physical continuum whose structure constrains how far misresolution can go, the
+  Puruṣa-Prakṛti boundary is, by the tradition's own account, uniquely susceptible to
+  thoroughgoing, systematic misresolution precisely because Puruṣa's own self-luminous
+  character (Series A, Part Three, Section 3.1) is so easily and so naturally mistaken for the
+  reflected luminosity of Prakṛti's most sāttvika products (buddhi itself, in its clearest
+  operation) that the very faculty performing the discrimination is structurally predisposed,
+  absent the sustained corrective discipline of viveka, to misread its own clarity as evidence
+  of its own status as the ultimate witness, rather than correctly recognising that clarity as
+  Prakṛti's sattva-dominant product illuminated by a Puruṣa it does not itself contain.</p>
+
+  <h3>6.4 The Series' Stakes: Why Part Six Exists</h3>
+  <p>This section's analysis establishes the precise philosophical and psychological problem
+  that Part Six's full treatment of Yoga-śāstra exists to address. If buddhi's discriminating
+  function is uniformly necessary for any determinate cognition whatsoever (this section's
+  resolution of the apparent tension), and if that same function is structurally predisposed
+  toward a specific, consequential misresolution at the Puruṣa-Prakṛti boundary (Section
+  6.3's explanation of why), then a psychological technology specifically engineered to
+  correct this particular misresolution — without thereby disabling buddhi's indispensable
+  general discriminating capacity — becomes a practical and not merely theoretical necessity.
+  This is precisely Patañjali's project, as Series A's Part Three, Section 11.3, already
+  outlined in connection with the aṣṭāṅga path: a graduated discipline moving the
+  practitioner's antaḥkaraṇa from gross, tāmasika, outward-facing modes toward increasingly
+  subtle, sāttvika, inward-facing modes, until buddhi's own discriminative intelligence
+  achieves sufficient refinement to perform, at last, the one discrimination ordinary
+  unrefined buddhi systematically gets wrong. Part Six will develop this technology — citta-
+  vṛtti-nirodha, the stilling of citta's fluctuations — in full, building directly on the
+  citta-architecture this paper's Section 4.3 and Part One's Section 5.3 have already
+  established.</p>
+
+  <blockquote class="pull">
+    Discrimination is not the disease and it is not the cure; it is the single capacity
+    underneath both. The disease is a specific misresolution at a specific boundary, made
+    possible by that boundary's peculiar resistance to easy reading. The cure, the tradition
+    insists, cannot be the abandonment of discrimination — that would abandon cognition
+    itself — but its sustained, disciplined refinement until it can finally see correctly
+    what it has, until now, been seeing wrong.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-7">VII.</h1>
+  <h2 class="sectiontitle">Forward to Part Three: From Discrimination to Affect</h2>
+
+  <h3>7.1 What This Paper Has Established</h3>
+  <p>The present paper has developed five results. First, it has identified śabda-bheda's
+  general four-stage structure (undivided continuum, discrimination-operation, discrete
+  units, residual boundary-trace) through close examination of the grammatical tradition's
+  phonemic analysis, with sandhi specifically identified as the formal record of
+  differentiation's incompleteness. Second, it has generalised this structure, with explicit
+  methodological caution regarding the strength of the generalisation claim, to perceptual
+  category-formation (chromatic and object-perceptual) and shown the same four stages
+  recurring with appropriately different content. Third, it has examined the categorical
+  perception literature as the most directly relevant and most rigorously documented
+  empirical anchor for this generalisation, finding genuine convergence (boundary-instability,
+  saṃskāra-conditioned variation in boundary-placement) without overclaiming historical
+  influence or identity between the ancient grammatical tradition and modern experimental
+  psychology. Fourth, it has traced viveka-khyāti as the same fundamental discriminating
+  operation applied, at its most refined and consequential, to the Puruṣa-Prakṛti boundary
+  itself. Fifth, it has resolved the apparent tension between discrimination's status as
+  cognitively indispensable and its status as the proximate mechanism of bondage, locating
+  the resolution in a specific, structurally explicable misresolution at one particular
+  boundary rather than in any defect of discrimination as such — establishing the precise
+  problem Part Six's treatment of Yoga-śāstra will address.</p>
+
+  <h3>7.2 What Remains: Affect as a Further Differentiation-Domain</h3>
+  <p>This paper has examined bheda primarily in cognitive and perceptual domains —
+  phonemes, colours, objects, and finally the Puruṣa-Prakṛti boundary itself. It has not yet
+  examined affect: the felt, emotionally toned quality of experience that Part One's Section
+  5a.3 introduced briefly, in connection with bhāva, as citta-conditioned becoming rather than
+  private sensation, but did not develop as a differentiation-domain in its own right. Part
+  Three's task is to supply this development, examining the Sāma Veda's melodic and accentual
+  innovations — the udātta, anudātta, and svarita tonal accents, and the broader sāmagāna
+  tradition of Vedic chant-melody — as the historical and structural locus at which the
+  bheda-operation this paper has documented at the phonemic and perceptual levels is first
+  systematically extended into the felt, affective register: not merely discriminating what a
+  sound means, but discriminating, and thereby for the first time making available to
+  conscious cultivation, how a sound feels.</p>
+
+  <div class="context-box" id="preview-box">
+    <h3>Preview of Part Three: Sāma Veda and the Birth of Affect</h3>
+    <p>Part Three — <em>Sāma Veda and the Birth of Affect</em> — will examine the three Vedic
+    tonal accents (udātta, anudātta, svarita) and the sāmagāna chant-tradition as the
+    historical and structural moment at which śabda-bheda's discriminating operation,
+    documented in the present paper at the phonemic and perceptual levels, is first
+    systematically turned upon tone and melody — producing, the paper will argue, the first
+    fully developed psychological technology for the deliberate cultivation, rather than mere
+    passive undergoing, of feeling-states. Three results from the present paper feed directly
+    into Part Three's argument: first, the four-stage bheda structure (Sections I–II) provides
+    the template against which the Sāma Veda's tonal differentiation will be analysed; second,
+    the bhāva-as-becoming reading previewed in Part One, Section 5a.3, and the citta-
+    conditioning architecture developed throughout the present paper's Sections IV through VI,
+    supply the psychological mechanism by which melodic differentiation is proposed to produce
+    affective differentiation; third, the viveka discussion of Section V establishes the
+    methodological template — a single underlying capacity (here, bheda; in Part Three's case,
+    bheda specifically applied to tonal material) examined across both its ordinary and its
+    most refined, soteriologically significant applications — that Part Three's treatment of
+    sāmagāna as both ordinary liturgical practice and advanced contemplative technology will
+    follow.</p>
+  </div>
+
+  <blockquote class="pull">
+    A phoneme divides sound into meaning. A Sāma Veda accent divides sound into feeling. The
+    operation performing both divisions, this series has now argued twice over, is the same
+    operation — which means the next question is not whether feeling can be cultivated as
+    precisely as meaning can be parsed, but how, and by whom it first was.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <section id="footnotes">
+    <h2 class="sectiontitle" style="font-size:22px;">Footnotes</h2>
+    <ol class="footnotes">
+      <li><sup>1</sup> On Pāṇini's pratyāhāra technique and the Māheśvara sūtras: Series A, Part Two, Section 2.2, citing George Cardona, <i>Pāṇini: A Survey of Research</i> (The Hague: Mouton, 1976), and Frits Staal, ed., <i>A Reader on the Sanskrit Grammarians</i> (Cambridge: MIT Press, 1972).</li>
+      <li><sup>2</sup> On sandhi as the formal record of incomplete differentiation: see also Series A, Part Three, Section 1.2, where sandhi is examined as the etymological basis for this series' predecessor's "interface" terminology.</li>
+      <li><sup>3</sup> On Patañjali's Mahābhāṣya and the Paspaśāhnika's opening methodological discussion: ed. F. Kielhorn, 3 vols. (Bombay: Government Central Book Depot, 1880–1885).</li>
+      <li><sup>4</sup> On infant object-perception and the principles of cohesion, boundedness, and spatiotemporal continuity: Elizabeth S. Spelke, "Principles of object perception," <i>Cognitive Science</i> 14 (1990): 29–56.</li>
+      <li><sup>5</sup> On categorical perception of speech sounds: Alvin M. Liberman et al., "The discrimination of speech sounds within and across phoneme boundaries," <i>Journal of Experimental Psychology</i> 54 (1957): 358–368.</li>
+      <li><sup>6</sup> On cross-linguistic variation in colour categorisation and its perceptual consequences: Jonathan Winawer et al., "Russian blues reveal effects of language on color discrimination," <i>PNAS</i> 104 (2007): 7780–7785.</li>
+      <li><sup>7</sup> On Eleanor Rosch's prototype theory and hierarchical category structure: Eleanor Rosch, "Cognitive representations of semantic categories," <i>Journal of Experimental Psychology: General</i> 104 (1975): 192–233.</li>
+      <li><sup>8</sup> On viveka-khyāti and the aṣṭāṅga path: Series A, Part Three, Section 11.3, citing Georg Feuerstein, trans., <i>The Yoga-Sūtra of Patañjali</i> (Rochester, VT: Inner Traditions, 1989).</li>
+      <li><sup>9</sup> On Puruṣa's apparent bondage through aviveka: Series A, Part Three, Section 3.2, citing Gerald J. Larson, <i>Classical Sāṃkhya: An Interpretation of Its History and Meaning</i> (Delhi: Motilal Banarsidass, 1979).</li>
+      <li><sup>10</sup> On the threefold discipline of śravaṇa, manana, nididhyāsana: Series A, Part Five, Section 2.3, citing Bṛhadāraṇyaka Upaniṣad II.4.5 and IV.5.6.</li>
+      <li><sup>11</sup> Cultural Musings, <i>Series A: The Advent of Language in Itself (Part One) through Vāk Returning to Itself (Part Six)</i>, available at shastrasextentionvak.culturalmusings.com and successor subdomains.</li>
+      <li><sup>12</sup> Cultural Musings, <i>Series B, Part One: Vāk as the Ground of Psychological Awareness</i>, shastrasvakpsychology.culturalmusings.com.</li>
+    </ol>
+  </section>
+
+  <div class="divider-orn">★</div>
+
+  <section id="bibliography">
+    <h2 class="sectiontitle" style="font-size:22px;">Bibliography</h2>
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;">Primary Sources — Classical Indian Texts</h4>
+    <p class="dim" style="font-size:14.5px;">Pāṇini. <i>Aṣṭādhyāyī.</i> Ed. and trans. S. C. Vasu. 2 vols. Allahabad: Indian Press, 1891; repr. Delhi: Motilal Banarsidass, 1975.<br>
+    Patañjali (the Grammarian). <i>Mahābhāṣya.</i> Ed. F. Kielhorn. 3 vols. Bombay: Government Central Book Depot, 1880–1885.<br>
+    Patañjali (the Yogin). <i>Yoga-Sūtra.</i> Trans. Georg Feuerstein, <i>The Yoga-Sūtra of Patañjali: A New Translation and Commentary.</i> Rochester, VT: Inner Traditions, 1989.<br>
+    Īśvarakṛṣṇa. <i>Sāṃkhyakārikā.</i> Trans. Gerald J. Larson, in <i>Classical Sāṃkhya.</i> Delhi: Motilal Banarsidass, 1979.</p>
+
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Secondary Sources — Grammar and Linguistic Philosophy</h4>
+    <p class="dim" style="font-size:14.5px;">Cardona, George. <i>Pāṇini: A Survey of Research.</i> The Hague: Mouton, 1976.<br>
+    Staal, Frits, ed. <i>A Reader on the Sanskrit Grammarians.</i> Cambridge: MIT Press, 1972.<br>
+    Coward, Harold, and K. Kunjunni Raja, eds. <i>The Philosophy of the Grammarians.</i> Encyclopedia of Indian Philosophies, vol. V. Princeton: Princeton University Press, 1990.</p>
+
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Secondary Sources — Cognitive and Perceptual Psychology</h4>
+    <p class="dim" style="font-size:14.5px;">Liberman, Alvin M., et al. "The discrimination of speech sounds within and across phoneme boundaries." <i>Journal of Experimental Psychology</i> 54 (1957): 358–368.<br>
+    Spelke, Elizabeth S. "Principles of object perception." <i>Cognitive Science</i> 14 (1990): 29–56.<br>
+    Rosch, Eleanor. "Cognitive representations of semantic categories." <i>Journal of Experimental Psychology: General</i> 104 (1975): 192–233.<br>
+    Winawer, Jonathan, et al. "Russian blues reveal effects of language on color discrimination." <i>Proceedings of the National Academy of Sciences</i> 104 (2007): 7780–7785.<br>
+    Harnad, Stevan, ed. <i>Categorical Perception: The Groundwork of Cognition.</i> Cambridge: Cambridge University Press, 1987.</p>
+
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Secondary Sources — Sāṃkhya, Yoga, and Vedānta</h4>
+    <p class="dim" style="font-size:14.5px;">Larson, Gerald J. <i>Classical Sāṃkhya: An Interpretation of Its History and Meaning.</i> Delhi: Motilal Banarsidass, 1979.<br>
+    Larson, Gerald J., and Ram Shankar Bhattacharya, eds. <i>Sāṃkhya: A Dualist Tradition in Indian Philosophy.</i> Encyclopedia of Indian Philosophies, vol. IV. Princeton: Princeton University Press, 1987.<br>
+    Feuerstein, Georg, trans. <i>The Yoga-Sūtra of Patañjali: A New Translation and Commentary.</i> Rochester, VT: Inner Traditions, 1989.<br>
+    Taimni, I. K. <i>The Science of Yoga.</i> Adyar: Theosophical Publishing House, 1961.</p>
+
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Predecessor and Series Context</h4>
+    <p class="dim" style="font-size:14.5px;">Cultural Musings. <i>Series A, Part One: The Advent of Language in Itself.</i> shastrasextentionvak.culturalmusings.com.<br>
+    Cultural Musings. <i>Series A, Part Two: The Script as Philosophy.</i> shastrasextentionvakone.culturalmusings.com.<br>
+    Cultural Musings. <i>Series A, Part Three: Prakṛti–Puruṣa as Living Interface (Extended Edition).</i> shastrasextentionvaktwo.culturalmusings.com.<br>
+    Cultural Musings. <i>Series A, Part Five: The Bhāṣya Tradition as Lineage.</i> shastrasextentionvakfour.culturalmusings.com.<br>
+    Cultural Musings. <i>Series B, Part One: Vāk as the Ground of Psychological Awareness.</i> shastrasvakpsychology.culturalmusings.com.</p>
+  </section>
+
+  <div class="divider-orn">☆</div>
+
+  <section id="glossary">
+    <h2 class="sectiontitle" style="font-size:22px;">Glossary</h2>
+    <p class="dim" style="font-size:14.5px;">This glossary collects the Sanskrit technical terms introduced or extended in the present paper. Terms already fully developed in Series A or Series B Part One are cross-referenced rather than re-defined in full.</p>
+    <dl class="glossary">
+      <dt><span class="glossterm">शब्दभेद</span> śabda-bheda</dt>
+      <dd>Sound-differentiation; the division of a continuous phonetic stream into discrete units. This paper's central mechanism, generalised across Sections I–VI into a theory of psychological discrimination generally.</dd>
+      <dt><span class="glossterm">वर्ण</span> varṇa</dt>
+      <dd>A discrete phoneme; Stage 3's resulting unit in the four-stage bheda structure (Section 1.2).</dd>
+      <dt><span class="glossterm">सन्धि</span> sandhi</dt>
+      <dd>The systematic modification occurring at phonemic and word junctures; this paper's Stage 4, the residual trace of an underlying continuity that division did not fully erase. See also Series A, Part Three, Section 1.2.</dd>
+      <dt><span class="glossterm">विवेक</span> viveka</dt>
+      <dd>Discriminative discernment; in its most refined soteriological application, viveka-khyāti, the clear discrimination of Puruṣa from Prakṛti. Examined in Section V as the same fundamental bheda-operation applied to its most consequential boundary.</dd>
+      <dt><span class="glossterm">अविद्या / अविवेक</span> avidyā / aviveka</dt>
+      <dd>Ignorance / non-discrimination; the misresolution, examined in Section VI, by which Puruṣa's qualities are mistakenly attributed to Prakṛti's products and vice versa.</dd>
+      <dt><span class="glossterm">अध्यवसाय</span> adhyavasāya</dt>
+      <dd>Buddhi's determinate, discriminative cognitive act. See Series A, Part Three, Section 5.1; Series B, Part One, Section 3.3; revisited throughout this paper as Stage 2's discrimination-operation.</dd>
+      <dt><span class="glossterm">भावना</span> bhāvanā (referenced, not developed here)</dt>
+      <dd>Cultivation, the deliberate development of a feeling-state or disposition; previewed as the connecting concept for Part Three's full treatment of affect.</dd>
+    </dl>
+  </section>
+
+  <div class="divider-orn">↗</div>
+
+  <section class="preview-box">
+    <h3>Series B: Complete Part Map (Repeated for Reference)</h3>
+    <table class="partmap">
+      <tr><th>Part</th><th>Title</th><th>Psychological Stage</th></tr>
+      <tr><td>I</td><td>Vāk as the Ground of Psychological Awareness</td><td>Pre-differentiated awareness</td></tr>
+      <tr><td class="this-paper">II</td><td class="this-paper">Śabda-Bheda: The Birth of Discrimination</td><td class="this-paper">This Paper</td></tr>
+      <tr><td>III</td><td>Sāma Veda and the Birth of Affect</td><td>Feeling-toned cognition</td></tr>
+      <tr><td>IV</td><td>Nāṭyaśāstra I: Rasa and the Architecture of Emotion</td><td>Aesthetic embodiment</td></tr>
+      <tr><td>V</td><td>Nāṭyaśāstra II: Abhinaya and Embodied Expression</td><td>Somatic cognition</td></tr>
+      <tr><td>VI</td><td>Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</td><td>Self-regulation / will</td></tr>
+      <tr><td>VII</td><td>Proliferation of Śāstra I: Vyākaraṇa, Nyāya</td><td>Specialised cognition</td></tr>
+      <tr><td>VIII</td><td>Proliferation of Śāstra II: Arthaśāstra, Āyurveda</td><td>Social/embodied extension</td></tr>
+      <tr><td>IX</td><td>Mantra-Śāstra: Vāk Returning as Sound-Technology</td><td>Recursive self-application</td></tr>
+      <tr><td>X</td><td>Case Studies in Śabda-to-Śāstra Transmission</td><td>Applied/historical synthesis</td></tr>
+      <tr><td>XI</td><td>Dharma and Adharma: The Convergent Psychology of Order</td><td>Ethical-metaphysical synthesis</td></tr>
+      <tr><td>XII</td><td>Pratiprasava: Vāk's Return and the Handoff Beyond</td><td>Closing return</td></tr>
+    </table>
+  </section>
+
+</main>
+
+<footer class="papertail">
+  <div class="om">ॐ तत् सत्</div>
+  <div class="omtatsat">om tat sat — That is Truth</div>
+  <div class="stamp">
+    <b>Series B · Part Two</b> · Śabda-Bheda: The Birth of Discrimination<br>
+    Cultural Musings · Vedic &amp; Śāstric Research Platform<br>
+    Predecessor: Series B · Part One · shastrasvakpsychology.culturalmusings.com
+  </div>
+</footer>
+
+</body>
+</html>
